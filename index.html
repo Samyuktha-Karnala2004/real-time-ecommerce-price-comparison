@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+    <h1>Product Price Comparison</h1>
+    <input type="text" id="searchInput" placeholder="Search product...">
+    <button onclick="searchProduct()">Search</button>
+
+    <!-- 🔽 Add here -->
+    <div style="margin-top: 1rem;">
+      <label>
+        <input type="checkbox" id="bestValueOnly" onchange="searchProduct()"> Show Only ✅ Best Value
+      </label>
+
+      <select id="sortOption" onchange="searchProduct()" style="margin-left: 1rem;">
+        <option value="">Sort By</option>
+        <option value="priceLowHigh">Price: Low to High</option>
+        <option value="priceHighLow">Price: High to Low</option>
+        <option value="platform">Platform Name</option>
+      </select>
+    </div>
+    <!-- 🔼 End -->
+
+    <div id="results"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>

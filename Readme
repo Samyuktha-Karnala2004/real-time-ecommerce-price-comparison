@@ -1,0 +1,52 @@
+# 🛍 E-Commerce Price Scraper - Mini Project
+
+This project is a B.Tech mini project that allows users to scrape product prices (e.g., iPhone 16 128GB) from major Indian e-commerce websites including:
+
+- Amazon.in
+- Flipkart.com
+- Croma.com
+- RelianceDigital.in
+
+Built with **Python**, **Selenium**, **BeautifulSoup**, and **FastAPI**, it provides a unified way to get real-time product pricing across platforms.
+
+---
+
+## 📁 Project Structure
+
+web_scrapping/ │ ├── amazon_scraper.py # Scrapes product data from Amazon ├── flipkart_scraper.py # Scrapes product data from Flipkart ├── croma_scraper.py # Scrapes product data from Croma ├── reliance_scraper.py # Scrapes product data from Reliance Digital │ ├── main.py # FastAPI server with combined route ├── utils.py # Shared utility functions ├── requirements.txt # Required Python packages └── README.md # You're reading it!
+
+yaml
+Copy
+Edit
+
+---
+
+## 🚀 Features
+
+✅ Scrape live prices, titles, and links for a search term
+✅ Combines results from all four platforms
+✅ Headless and visual scraping support
+✅ Built-in popup handling (e.g., Reliance Digital)
+✅ FastAPI endpoint to trigger scraping via browser or API
+
+---
+
+## 🧰 Installation
+
+Install dependencies:
+pip install -r requirements.txt
+
+Run the FastAPI server:
+uvicorn main:app --reload
+Access the API Docs:
+
+Visit http://127.0.0.1:8000/docs
+
+📝 Usage Example
+Call the endpoint /scrape?query=iphone+16+128gb to get a list of matching products:
+GET http://127.0.0.1:8000/scrape?query=iphone+16+128gb
+
+📌 Notes
+Amazon and Flipkart layouts may change frequently, keep your XPaths updated.
+Reliance Digital may show popups — the scraper handles common ones.
+This project is for educational purposes only.
